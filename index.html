@@ -4,17 +4,46 @@
 		<meta charset="UTF-8">
 		<title>Electron App</title>
 		<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 		<style type="text/css">
-			.presentation{
-				color: #60a3b2;
-				font-size: 1.5rem;
-				font-style: muka;
+			* {
+
+				-webkit-user-select: none;
+				cursor: default;
+				/*-webkit-app-region: drag;*/
+			}
+			#navbar-nekoapp{
+				-webkit-app-region: drag;
+			}
+			.navbar-toggler,.nav-item{
+				-webkit-app-region: no-drag;	
 			}
 		</style>
 	</head>
 	<body>
-		<!-- <p class="presentation">Aplicaci&oacute;n de presentaci&oacute;n de electr&oacute;n y sus beneficios.</p> -->
-		<div style="background-color: red" class="container">
+		<nav id="navbar-nekoapp" class="navbar navbar-dark bg-dark">
+			<a class="navbar-brand" href="#"><i class="fas fa-paw"></i> Neko App</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav">
+					<li class="nav-item active">
+						<a class="nav-link" href="#">Tweek <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Arcoris</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Serena</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Elvis</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<div class="container">
 			<div class="row">
 				<div class="col">
 					
@@ -25,7 +54,6 @@
 			</div>
 		</div>
 		<script>
-			// You can also require other files to run in this process
 			require('./renderer.js');
 			window.$ = window.jquery = require("jquery");
 			window.popper = require("popper.js");
