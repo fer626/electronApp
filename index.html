@@ -1,17 +1,35 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Electron App</title>
-    <style type="text/css">
-      .presentation{
-        color: #60a3b2;
-        font-size: 1.5rem;
-        font-style: helvetica;
-      }
-    </style>
-  </head>
-  <body>
-    <p class="presentation">Aplicacion de presentacion de electron y sus benegficios.</p>
-  </body>
+	<head>
+		<meta charset="UTF-8">
+		<title>Electron App</title>
+		<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+		<style type="text/css">
+			.presentation{
+				color: #60a3b2;
+				font-size: 1.5rem;
+				font-style: muka;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- <p class="presentation">Aplicaci&oacute;n de presentaci&oacute;n de electr&oacute;n y sus beneficios.</p> -->
+		<div style="background-color: red" class="container">
+			<div class="row">
+				<div class="col">
+					
+				</div>
+				<div class="col">
+					
+				</div>
+			</div>
+		</div>
+		<script>
+			// You can also require other files to run in this process
+			require('./renderer.js');
+			window.$ = window.jquery = require("jquery");
+			window.popper = require("popper.js");
+			require("bootstrap");
+		</script>
+	</body>
 </html>
